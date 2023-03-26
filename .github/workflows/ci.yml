@@ -1,0 +1,47 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+env:
+    NODE_VERSION: '16'
+    FRONTIFY_INSTANCE_DOMAIN: "company-241204.frontify.com"
+
+jobs:
+    run-action:
+        name: Run action
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+
+        steps:
+            - name: Checkout default branch
+              uses: actions/checkout@v3
+
+            - name: Use pnpm
+              uses: pnpm/action-setup@v2
+              with:
+                  version: latest
+
+            - name: Use Node.js ${{ env.NODE_VERSION }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+                  cache: 'pnpm'
+
+            - name: Install dependencies
+              run: pnpm i --frozen-lockfile
+
+            - name: Build the action
+              run: pnpm all
+
+            - name: Run deployment action
+              uses: ./
+              with:
+                  path: ./tests/dummy-block
+                  instanceDomain: ${{ env.FRONTIFY_INSTANCE_DOMAIN }}
+                  token: ${{ secrets.FRONTIFY_TOKEN }}

@@ -1,0 +1,23 @@
+name: 'Frontify App Deploy'
+author: 'Samuel Alev'
+description: 'GitHub Action to deploy Frontify apps'
+
+inputs:
+    instanceDomain:
+        description: 'Domain of your Frontify instance'
+        required: true
+
+    token:
+        description: 'Autorization token (can be generated on `<DOMAIN_NAME>/api/oauth-access-token/show`)'
+        required: true
+
+    path:
+        description: 'Path of the app root'
+        required: true
+
+    args:
+        description: 'Extra arguments to pass to the CLI'
+
+runs:
+    using: 'node16'
+    main: 'dist/index.js'
