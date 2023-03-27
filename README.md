@@ -41,7 +41,7 @@ jobs:
               run: npm ci
 
             - name: Deploy to Frontify Marketplace
-              uses: samuelalev/frontify-app-deploy-action@v1
+              uses: samuelalev/frontify-app-deploy-action@main
               with:
                   instanceDomain: 'app.frontify.com'
                   token: ${{ secrets.FRONTIFY_TOKEN }}
