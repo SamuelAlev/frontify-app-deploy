@@ -14,6 +14,8 @@ export const deploy = async (
     writeConfigFile(token, instanceDomain);
 
     const appPaths = globSync(pathGlob);
+    console.log(`Found ${appPaths.length} apps for path "${pathGlob}":`);
+    console.log(`- ${appPaths.join('\n- ')}`);
 
     if (appPaths.length === 0) {
         throw new Error(`No apps found for path "${pathGlob}"!`);
