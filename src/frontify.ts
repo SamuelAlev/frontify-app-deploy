@@ -2,6 +2,7 @@ import { globSync } from 'glob';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { spawn } from 'node:child_process';
 import { dirname, resolve } from 'node:path';
+import { info } from '@actions/core';
 
 const CONFIG_PATH = `${process.env.XDG_CONFIG_HOME}/frontify-cli-nodejs/config.json`;
 
@@ -14,17 +15,17 @@ export const deploy = async (
     writeConfigFile(token, instanceDomain);
 
     const appPaths = globSync(pathGlob);
-    console.log(`Found ${appPaths.length} apps for path "${pathGlob}":`);
-    console.log(`- ${appPaths.join('\n- ')}`);
+    info(`Found ${appPaths.length} apps for path "${pathGlob}":`);
+    info(`- ${appPaths.join('\n- ')}`);
 
     if (appPaths.length === 0) {
         throw new Error(`No apps found for path "${pathGlob}"!`);
     }
 
     for (const appPath of appPaths) {
-        console.log(`Start deploying "${appPath}" to ${instanceDomain}...`);
+        info(`Start deploying "${appPath}" to ${instanceDomain}...`);
         await deployApp(appPath, extraArgs);
-        console.log(`Deployed "${appPath}"!`);
+        info(`Deployed "${appPath}"!`);
     }
 };
 
