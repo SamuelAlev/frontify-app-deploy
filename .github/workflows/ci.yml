@@ -10,7 +10,7 @@ on:
 
 env:
     NODE_VERSION: '16'
-    FRONTIFY_INSTANCE_DOMAIN: "company-241204.frontify.com"
+    FRONTIFY_INSTANCE_DOMAIN: 'company-241204.frontify.com'
 
 jobs:
     run-action:
