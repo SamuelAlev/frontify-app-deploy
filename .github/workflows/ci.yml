@@ -38,9 +38,16 @@ jobs:
             - name: Build the action
               run: pnpm all
 
-            - name: Run deployment action
+            - name: Run deployment action (single app)
               uses: ./
               with:
                   path: ./tests/dummy-block
+                  instanceDomain: ${{ env.FRONTIFY_INSTANCE_DOMAIN }}
+                  token: ${{ secrets.FRONTIFY_TOKEN }}
+
+            - name: Run deployment action (monorepo with multiple apps)
+              uses: ./
+              with:
+                  path: ./tests/dummy-blocks-monorepo/*
                   instanceDomain: ${{ env.FRONTIFY_INSTANCE_DOMAIN }}
                   token: ${{ secrets.FRONTIFY_TOKEN }}
