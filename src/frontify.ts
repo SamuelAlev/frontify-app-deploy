@@ -1,19 +1,13 @@
-import { globSync } from 'glob';
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { spawn } from 'node:child_process';
-import { dirname, resolve } from 'node:path';
 import { info } from '@actions/core';
-
-const CONFIG_PATH = `${process.env.XDG_CONFIG_HOME}/frontify-cli-nodejs/config.json`;
+import { globSync } from 'glob';
 
 export const deploy = async (
     token: string,
     instanceDomain: string,
     pathGlob: string,
-    extraArgs: string
+    extraArgs: string,
 ): Promise<void> => {
-    writeConfigFile(token, instanceDomain);
-
     const appPaths = globSync(pathGlob);
     info(`Found ${appPaths.length} apps for path "${pathGlob}":`);
     info(`- ${appPaths.join('\n- ')}`);
@@ -24,21 +18,21 @@ export const deploy = async (
 
     for (const appPath of appPaths) {
         info(`Start deploying "${appPath}" to ${instanceDomain}...`);
-        await deployApp(appPath, extraArgs);
+        await deployApp(appPath, `--token ${token} --instance ${instanceDomain}`, extraArgs);
         info(`Deployed "${appPath}"!`);
     }
 };
 
-const deployApp = async (path: string, extraArgs: string): Promise<void> => {
+const deployApp = async (path: string, ...extraArgs: string[]): Promise<void> => {
     return new Promise((resolve, reject) => {
-        const childProcess = spawn(`cd ${path} && npx frontify-cli deploy ${extraArgs}`, [], { shell: true });
+        const childProcess = spawn(`cd ${path} && npx frontify-cli deploy ${extraArgs.join(' ')}`, [], { shell: true });
 
         childProcess.stdout.on('data', (data) => {
-            console.log(data.toString());
+            info(data.toString());
         });
 
         childProcess.stderr.on('data', (data) => {
-            console.log(data.toString());
+            info(data.toString());
         });
 
         childProcess.on('exit', (code) => {
@@ -49,24 +43,4 @@ const deployApp = async (path: string, extraArgs: string): Promise<void> => {
             }
         });
     });
-};
-
-const writeConfigFile = (token: string, instanceUrl: string): void => {
-    const configDir = dirname(resolve(CONFIG_PATH));
-
-    if (!existsSync(configDir)) {
-        mkdirSync(configDir, { recursive: true });
-    }
-
-    writeFileSync(
-        resolve(CONFIG_PATH),
-        JSON.stringify({
-            instanceUrl,
-            tokens: {
-                token_type: 'Bearer',
-                access_token: token,
-            },
-        }),
-        'utf8'
-    );
 };

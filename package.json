@@ -25,18 +25,18 @@
         "action"
     ],
     "devDependencies": {
-        "@frontify/eslint-config-typescript": "^0.15.7",
+        "@frontify/eslint-config-typescript": "^0.16.2",
         "@types/glob": "^8.1.0",
-        "@types/node": "^18.15.10",
-        "@vercel/ncc": "^0.36.1",
-        "eslint": "^8.36.0",
-        "prettier": "^2.8.7",
-        "typescript": "^5.0.2"
+        "@types/node": "^20.11.15",
+        "@vercel/ncc": "^0.38.1",
+        "eslint": "^8.56.0",
+        "prettier": "^3.2.4",
+        "typescript": "^5.3.3"
     },
     "dependencies": {
-        "@actions/core": "^1.10.0",
-        "@actions/github": "^5.1.1",
-        "@frontify/frontify-cli": "^5.3.9",
-        "glob": "^9.3.2"
+        "@actions/core": "^1.10.1",
+        "@actions/github": "^6.0.0",
+        "@frontify/frontify-cli": "^5.6.0",
+        "glob": "^10.3.10"
     }
 }

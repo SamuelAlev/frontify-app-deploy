@@ -1,0 +1,3 @@
+{
+    "extends": ["@frontify/eslint-config-typescript"],
+}

@@ -3,5 +3,14 @@
     "tabWidth": 4,
     "printWidth": 120,
     "arrowParens": "always",
-    "endOfLine": "lf"
+    "endOfLine": "lf",
+    "overrides": [
+        {
+            "files": ["tsconfig.json"],
+            "options": {
+                "parser": "json",
+                "trailingComma": "none"
+            }
+        }
+    ]
 }
