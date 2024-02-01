@@ -43,7 +43,7 @@ jobs:
               run: npm ci
 
             - name: Deploy to Frontify Marketplace
-              uses: samuelalev/frontify-app-deploy-action@main
+              uses: samuelalev/frontify-app-deploy-action@v1
               with:
                   path: './path/to/block'
                   token: ${{ secrets.FRONTIFY_TOKEN }}
@@ -86,7 +86,7 @@ jobs:
               run: pnpm i --frozen-lockfile
 
             - name: Deploy to Frontify Marketplace
-              uses: samuelalev/frontify-app-deploy-action@main
+              uses: samuelalev/frontify-app-deploy-action@v1
               with:
                   path: './packages/*' # Deploy all apps in the packages folder
                   token: ${{ secrets.FRONTIFY_TOKEN }}
