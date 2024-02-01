@@ -13,7 +13,9 @@ This action accepts the following inputs:
 -   `path`: **(required)** Path of the app(s) root (support glob pattern)
 -   `args`: Extra arguments to pass to the CLI
 
-### Example
+### Examples
+
+#### Deploy a single app
 
 ```yaml
 name: Deploy to Frontify Marketplace
@@ -43,9 +45,52 @@ jobs:
             - name: Deploy to Frontify Marketplace
               uses: samuelalev/frontify-app-deploy-action@main
               with:
-                  instanceDomain: 'app.frontify.com'
-                  token: ${{ secrets.FRONTIFY_TOKEN }}
                   path: './path/to/block'
+                  token: ${{ secrets.FRONTIFY_TOKEN }}
+                  instanceDomain: 'app.frontify.com'
+```
+
+#### Deploy multiple apps
+
+This example uses pnpm as a monorepo tool, but you can use any other tool.
+
+```yaml
+name: Deploy to Frontify Marketplace
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Use pnpm
+              uses: pnpm/action-setup@v2
+              with:
+                  version: latest
+                  run_install: false
+
+            - name: Use Node.js 20
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+                  cache: 'pnpm'
+
+            - name: Install dependencies
+              run: pnpm i --frozen-lockfile
+
+            - name: Deploy to Frontify Marketplace
+              uses: samuelalev/frontify-app-deploy-action@main
+              with:
+                  path: './packages/*' # Deploy all apps in the packages folder
+                  token: ${{ secrets.FRONTIFY_TOKEN }}
+                  instanceDomain: 'app.frontify.com'
 ```
 
 ## License
