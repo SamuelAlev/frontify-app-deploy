@@ -2,12 +2,7 @@ import { spawn } from 'node:child_process';
 import { info } from '@actions/core';
 import { globSync } from 'glob';
 
-export const deploy = async (
-    token: string,
-    instanceDomain: string,
-    pathGlob: string,
-    extraArgs: string,
-): Promise<void> => {
+export const deploy = async (token: string, instanceDomain: string, pathGlob: string, extraArgs: string): Promise<void> => {
     const appPaths = globSync(pathGlob);
     info(`Found ${appPaths.length} apps for path "${pathGlob}":`);
     info(`- ${appPaths.join('\n- ')}`);

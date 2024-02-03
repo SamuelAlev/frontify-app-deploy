@@ -35,8 +35,14 @@ jobs:
             - name: Install dependencies
               run: pnpm i --frozen-lockfile
 
-            - name: Build the action
-              run: pnpm all
+            - name: Check formatting of code
+              run: pnpm format
+
+            - name: Bundle the code
+              run: pnpm build
+
+            - name: Package for GitHub Actions
+              run: pnpm package
 
             - name: Run deployment action (single app)
               uses: ./
