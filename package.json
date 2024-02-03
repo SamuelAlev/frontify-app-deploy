@@ -1,6 +1,6 @@
 {
     "name": "frontify-app-deploy",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "Samuel Alev <samuel.alev@protonmail.com>",
     "description": "GitHub Action to deploy Frontify apps",
     "license": "MIT",
