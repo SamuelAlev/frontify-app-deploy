@@ -16,7 +16,7 @@ importers:
         version: 6.0.0
       '@frontify/frontify-cli':
         specifier: ^5.6.0
-        version: 5.6.9(@types/node@20.11.25)
+        version: 5.6.10(@types/node@20.11.25)
       glob:
         specifier: ^10.3.10
         version: 10.3.10
@@ -60,7 +60,7 @@ importers:
         version: 0.17.0(eslint@8.56.0)(prettier@3.2.4)(react@18.2.0)(typescript@5.3.3)
       '@frontify/frontify-cli':
         specifier: ^5.6.0
-        version: 5.6.9(@types/node@20.11.25)
+        version: 5.6.10(@types/node@20.11.25)
       '@types/react':
         specifier: ^18.2.51
         version: 18.2.51
@@ -103,7 +103,7 @@ importers:
         version: 0.17.0(eslint@8.56.0)(prettier@3.2.4)(react@18.2.0)(typescript@5.3.3)
       '@frontify/frontify-cli':
         specifier: ^5.6.0
-        version: 5.6.9(@types/node@20.11.25)
+        version: 5.6.10(@types/node@20.11.25)
       '@types/react':
         specifier: ^18.2.51
         version: 18.2.51
@@ -146,7 +146,7 @@ importers:
         version: 0.17.0(eslint@8.56.0)(prettier@3.2.4)(react@18.2.0)(typescript@5.3.3)
       '@frontify/frontify-cli':
         specifier: ^5.6.0
-        version: 5.6.9(@types/node@20.11.25)
+        version: 5.6.10(@types/node@20.11.25)
       '@types/react':
         specifier: ^18.2.51
         version: 18.2.51
@@ -884,7 +884,7 @@ packages:
   /@fastify/fast-json-stringify-compiler@4.3.0:
     resolution: {integrity: sha512-aZAXGYo6m22Fk1zZzEUKBvut/CIIQe/BapEORnxiD5Qr0kPHqqI69NtEMCme74h+at72sPhbkb4ZrLd1W3KRLA==}
     dependencies:
-      fast-json-stringify: 5.12.0
+      fast-json-stringify: 5.13.0
 
   /@fastify/merge-json-schemas@0.1.1:
     resolution: {integrity: sha512-fERDVz7topgNjtXsJTTW1JKLy0rhuLRcquYqNR9rF7OcVpCa2OVW49ZPDIhaRRCaUuvVxI+N416xUoF76HNSXA==}
@@ -1161,8 +1161,8 @@ packages:
       - zustand
     dev: false
 
-  /@frontify/frontify-cli@5.6.9(@types/node@20.11.25):
-    resolution: {integrity: sha512-Gyed5QVAAZtCI6noYZ3y5xVDwRLZwoUIEN5aDqgt/NFBfa1TF/gJBiOWZFV+J55KQBoLhVeUPYbktqPuWTNTcg==}
+  /@frontify/frontify-cli@5.6.10(@types/node@20.11.25):
+    resolution: {integrity: sha512-YtB4KgGM5RK0IVLylfe7ahMt5pOtxYnu2HicRyJ1NTzVczwav/iBIVnU+xs5DNplwxHk7xaeG+0bKVlgh7TOvg==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
@@ -1175,7 +1175,7 @@ packages:
       fastify: 4.26.2
       glob-to-regexp: 0.4.1
       node-fetch: 3.3.2
-      open: 10.0.4
+      open: 10.1.0
       picocolors: 1.0.0
       prompts: 2.4.2
       vite: 4.5.2(@types/node@20.11.25)
@@ -7704,8 +7704,8 @@ packages:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
     dev: true
 
-  /fast-json-stringify@5.12.0:
-    resolution: {integrity: sha512-7Nnm9UPa7SfHRbHVA1kJQrGXCRzB7LMlAAqHXQFkEQqueJm1V8owm0FsE/2Do55/4CcdhwiLQERaKomOnKQkyA==}
+  /fast-json-stringify@5.13.0:
+    resolution: {integrity: sha512-XjTDWKHP3GoMQUOfnjYUbqeHeEt+PvYgvBdG2fRSmYaORILbSr8xTJvZX+w1YSAP5pw2NwKrGRmQleYueZEoxw==}
     dependencies:
       '@fastify/merge-json-schemas': 0.1.1
       ajv: 8.12.0
@@ -7728,8 +7728,8 @@ packages:
     dependencies:
       fast-decode-uri-component: 1.0.1
 
-  /fast-redact@3.3.0:
-    resolution: {integrity: sha512-6T5V1QK1u4oF+ATxs1lWUmlEk6P2T9HqJG3e2DnHOdVgZy2rFJBoEnrIedcTXlkAHU/zKC+7KETJ+KGGKwxgMQ==}
+  /fast-redact@3.4.0:
+    resolution: {integrity: sha512-2gwPvyna0zwBdxKnng1suu/dTL5s8XEy2ZqH8mwDUwJdDkV8w5kp+JV26mupdK68HmPMbm6yjW9m7/Ys/BHEHg==}
     engines: {node: '>=6'}
 
   /fast-shallow-equal@1.0.0:
@@ -7755,9 +7755,9 @@ packages:
       abstract-logging: 2.0.1
       avvio: 8.3.0
       fast-content-type-parse: 1.1.0
-      fast-json-stringify: 5.12.0
+      fast-json-stringify: 5.13.0
       find-my-way: 8.1.0
-      light-my-request: 5.11.1
+      light-my-request: 5.12.0
       pino: 8.19.0
       process-warning: 3.0.0
       proxy-addr: 2.0.7
@@ -8672,11 +8672,11 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /light-my-request@5.11.1:
-    resolution: {integrity: sha512-KXAh2m6VRlkWCk2KfmHE7tLBXKh30JE0tXUJY4dNxje4oLmPKUqlUfImiEQZLphx+Z9KTQcVv4DjGnJxkVOIbA==}
+  /light-my-request@5.12.0:
+    resolution: {integrity: sha512-P526OX6E7aeCIfw/9UyJNsAISfcFETghysaWHQAlQYayynShT08MOj4c6fBCvTWBrHXSvqBAKDp3amUPSCQI4w==}
     dependencies:
       cookie: 0.6.0
-      process-warning: 2.3.2
+      process-warning: 3.0.0
       set-cookie-parser: 2.6.0
 
   /lilconfig@2.1.0:
@@ -9396,8 +9396,8 @@ packages:
     dependencies:
       wrappy: 1.0.2
 
-  /open@10.0.4:
-    resolution: {integrity: sha512-oujJ/FFr7ra6/7gJuQ4ZJJ8Gf2VHM0J3J/W7IvH++zaqEzacWVxzK++NiVY5NLHTTj7u/jNH5H3Ei9biL31Lng==}
+  /open@10.1.0:
+    resolution: {integrity: sha512-mnkeQ1qP5Ue2wd+aivTD3NHd/lZ96Lu0jgf0pwktLPtx6cTZiH7tyeGRRHs0zX0rbrahXPnXlUnbeXyaBBuIaw==}
     engines: {node: '>=18'}
     dependencies:
       default-browser: 5.2.1
@@ -9540,7 +9540,7 @@ packages:
     hasBin: true
     dependencies:
       atomic-sleep: 1.0.0
-      fast-redact: 3.3.0
+      fast-redact: 3.4.0
       on-exit-leak-free: 2.1.2
       pino-abstract-transport: 1.1.0
       pino-std-serializers: 6.2.2
@@ -9711,9 +9711,6 @@ packages:
 
   /process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
-
-  /process-warning@2.3.2:
-    resolution: {integrity: sha512-n9wh8tvBe5sFmsqlg+XQhaQLumwpqoAUruLwjCopgTmUBjJ/fjtBsJzKleCaIGBOMXYEhp1YfKl4d7rJ5ZKJGA==}
 
   /process-warning@3.0.0:
     resolution: {integrity: sha512-mqn0kFRl0EoqhnL0GQ0veqFHyIN1yig9RHh/InzORTUiZHFRAur+aMtRkELNwGs9aNwKS6tg/An4NYBPGwvtzQ==}
