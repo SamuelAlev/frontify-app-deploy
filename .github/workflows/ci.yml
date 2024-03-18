@@ -9,7 +9,7 @@ on:
             - main
 
 env:
-    FRONTIFY_INSTANCE_DOMAIN: 'frontify.alev.cloud'
+    FRONTIFY_INSTANCE_DOMAIN: 'frontify.alev.dev'
 
 jobs:
     run-action:
