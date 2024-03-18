@@ -1,6 +1,41 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:base"],
+    "dependencyDashboard": false,
+    "vulnerabilityAlerts": {
+        "labels": ["security"]
+    },
+    "packageRules": [
+        {
+            "matchManagers": ["github-actions"],
+            "groupName": "github-actions-dependencies",
+            "automerge": true,
+            "schedule": ["on the first day of the month"]
+        },
+        {
+            "matchPackagePatterns": ["node"],
+            "groupName": "node",
+            "automerge": true,
+            "schedule": ["on the first day of the month"]
+        },
+        {
+            "matchPackagePatterns": ["pnpm"],
+            "matchUpdateTypes": ["minor"],
+            "groupName": "pnpm",
+            "automerge": true,
+            "schedule": ["on the first day of the month"]
+        },
+        {
+            "matchPackagePatterns": ["lucide-react"],
+            "groupName": "lucide-react",
+            "automerge": true,
+            "schedule": ["on Monday"]
+        },
+        {
+            "matchUpdateTypes": ["minor", "patch"],
+            "groupName": "minor and patches",
+            "automerge": true,
+            "schedule": ["on Monday"]
+        }
+    ]
 }
