@@ -16,7 +16,7 @@ importers:
         version: 6.0.0
       '@frontify/frontify-cli':
         specifier: ^5.6.0
-        version: 5.6.13(@types/node@20.12.7)
+        version: 5.6.14(@types/node@20.12.7)
       glob:
         specifier: ^10.3.10
         version: 10.3.12
@@ -60,7 +60,7 @@ importers:
         version: 0.17.0(eslint@8.56.0)(prettier@3.2.4)(react@18.2.0)(typescript@5.4.5)
       '@frontify/frontify-cli':
         specifier: ^5.6.0
-        version: 5.6.13(@types/node@20.12.7)
+        version: 5.6.14(@types/node@20.12.7)
       '@types/react':
         specifier: ^18.2.51
         version: 18.2.51
@@ -103,7 +103,7 @@ importers:
         version: 0.17.0(eslint@8.56.0)(prettier@3.2.4)(react@18.2.0)(typescript@5.4.5)
       '@frontify/frontify-cli':
         specifier: ^5.6.0
-        version: 5.6.13(@types/node@20.12.7)
+        version: 5.6.14(@types/node@20.12.7)
       '@types/react':
         specifier: ^18.2.51
         version: 18.2.51
@@ -146,7 +146,7 @@ importers:
         version: 0.17.0(eslint@8.56.0)(prettier@3.2.4)(react@18.2.0)(typescript@5.4.5)
       '@frontify/frontify-cli':
         specifier: ^5.6.0
-        version: 5.6.13(@types/node@20.12.7)
+        version: 5.6.14(@types/node@20.12.7)
       '@types/react':
         specifier: ^18.2.51
         version: 18.2.51
@@ -1169,8 +1169,8 @@ packages:
       - zustand
     dev: false
 
-  /@frontify/frontify-cli@5.6.13(@types/node@20.12.7):
-    resolution: {integrity: sha512-UkhvBWUAZreXw8pr+QksRkkJ0hmlSqgMrduB1xUfr+4zmGGsI3QWowSGOgFhaT0SDBw8DQNRq4Uqd8SZ9gmmdg==}
+  /@frontify/frontify-cli@5.6.14(@types/node@20.12.7):
+    resolution: {integrity: sha512-ctf7p8KbQnDKrRFYsndQINK6nM3DqEXnnI/+eWuKziRpmiTdhJC9QHYFinEXGwqQiC+OKl/THEyybl9P83lYAg==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -1188,7 +1188,7 @@ packages:
       prompts: 2.4.2
       vite: 4.5.3(@types/node@20.12.7)
       vite-plugin-externals: 0.6.2(vite@4.5.3)
-      zod: 3.22.4
+      zod: 3.23.0
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -11486,8 +11486,8 @@ packages:
       compress-commons: 6.0.2
       readable-stream: 4.5.2
 
-  /zod@3.22.4:
-    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+  /zod@3.23.0:
+    resolution: {integrity: sha512-OFLT+LTocvabn6q76BTwVB0hExEBS0IduTr3cqZyMqEDbOnYmcU+y0tUAYbND4uwclpBGi4I4UUBGzylWpjLGA==}
 
   /zustand@3.7.2(react@18.2.0):
     resolution: {integrity: sha512-PIJDIZKtokhof+9+60cpockVOq05sJzHCriyvaLBmEJixseQ1a5Kdov6fWZfWOu5SK9c+FhH1jU0tntLxRJYMA==}
