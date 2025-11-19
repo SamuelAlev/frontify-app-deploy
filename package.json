@@ -31,7 +31,7 @@
         "@actions/core": "^1.11.1",
         "@actions/github": "^6.0.0",
         "@frontify/frontify-cli": "^5.8.0",
-        "glob": "^11.0.0"
+        "glob": "^13.0.0"
     },
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
