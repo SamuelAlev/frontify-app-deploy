@@ -1,43 +1,42 @@
 {
-    "name": "frontify-app-deploy",
-    "version": "1.0.6",
-    "author": "Samuel Alev <samuel.alev@protonmail.com>",
-    "description": "GitHub Action to deploy Frontify apps",
-    "license": "MIT",
-    "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/SamuelAlev/frontify-app-deploy.git"
-    },
-    "bugs": {
-        "url": "https://github.com/SamuelAlev/frontify-app-deploy/issues"
-    },
-    "main": "lib/index.js",
-    "homepage": "https://github.com/SamuelAlev/frontify-app-deploy",
-    "keywords": [
-        "frontify",
-        "marketplace",
-        "app",
-        "deploy",
-        "github",
-        "action"
-    ],
-    "scripts": {
-        "build": "tsc",
-        "format": "biome ci src",
-        "package": "ncc build --source-map --license LICENSE -m"
-    },
-    "dependencies": {
-        "@actions/core": "^1.11.1",
-        "@actions/github": "^6.0.0",
-        "@frontify/frontify-cli": "^5.8.0",
-        "glob": "^11.0.0"
-    },
-    "devDependencies": {
-        "@biomejs/biome": "^1.9.4",
-        "@types/glob": "^8.1.0",
-        "@types/node": "^24.0.0",
-        "@vercel/ncc": "^0.38.2",
-        "typescript": "^5.6.3"
-    }
+	"name": "frontify-app-deploy",
+	"version": "1.0.6",
+	"author": "Samuel Alev <samuel.alev@protonmail.com>",
+	"description": "GitHub Action to deploy Frontify apps",
+	"license": "MIT",
+	"packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SamuelAlev/frontify-app-deploy.git"
+	},
+	"bugs": {
+		"url": "https://github.com/SamuelAlev/frontify-app-deploy/issues"
+	},
+	"main": "lib/index.js",
+	"homepage": "https://github.com/SamuelAlev/frontify-app-deploy",
+	"keywords": [
+		"frontify",
+		"marketplace",
+		"app",
+		"deploy",
+		"github",
+		"action"
+	],
+	"scripts": {
+		"build": "tsc",
+		"format": "biome ci src",
+		"package": "ncc build --source-map --license LICENSE -m"
+	},
+	"dependencies": {
+		"@actions/core": "^1.11.1",
+		"@actions/github": "^6.0.1",
+		"@frontify/frontify-cli": "^5.9.4",
+		"glob": "^13.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.8",
+		"@types/node": "^24.10.1",
+		"@vercel/ncc": "^0.38.4",
+		"typescript": "^5.9.3"
+	}
 }
