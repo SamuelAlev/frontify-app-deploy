@@ -37,6 +37,6 @@
 		"@biomejs/biome": "^2.3.8",
 		"@types/node": "^24.10.1",
 		"@vercel/ncc": "^0.44.0",
-		"typescript": "^5.9.3"
+		"typescript": "^6.0.0"
 	}
 }
