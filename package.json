@@ -28,7 +28,7 @@
 		"package": "ncc build --source-map --license LICENSE -m"
 	},
 	"dependencies": {
-		"@actions/core": "^2.0.0",
+		"@actions/core": "^3.0.0",
 		"@actions/github": "^7.0.0",
 		"@frontify/frontify-cli": "^5.9.4",
 		"glob": "^13.0.0"
